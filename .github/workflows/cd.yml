@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
-        run: git pull
-
       - name: setup go toolchain
         uses: actions/setup-go@v5
         with:
