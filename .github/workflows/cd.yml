@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      name: checkout code
-      run: git pull
+      - name: checkout code
+        run: git pull
 
-      name: setup go toolchain
-      uses: actions/setup-go@v5
-      with:
-        go-version: '1.23.0'
+      - name: setup go toolchain
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23.0'
 
-      name: build app
-      run: ./scripts/buildprod.sh
+      - name: build app
+        run: ./scripts/buildprod.sh
 
