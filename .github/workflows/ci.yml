@@ -29,10 +29,6 @@ jobs:
       - name: Check Format
         run: test -z $(go fmt ./...)
 
-      - name: Install Staticcheck
-        run: |
-          go install honnef.co/go/tools/cmd/staticcheck@latest
-          echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
-          source ~/.bashrc
-          staticcheck ./...
+      - name: staticcheck
+        run:  go install honnef.co/go/tools/cmd/staticcheck@latest
 
