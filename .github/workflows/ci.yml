@@ -20,3 +20,11 @@ jobs:
 
       - name: Check Go version
         run: go test ./... -cover
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Format
+        run: test -z $(go fmt ./...)
